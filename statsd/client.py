@@ -111,6 +111,10 @@ class StatsClientBase(object):
         """Set a set value."""
         self._send_stat(stat, '%s|s' % value, rate, tags)
 
+    def measure(self, stat, value, rate, tags=None):
+        """Set a measure value."""
+        self._send_stat(stat, '%s|ms' % value, rate, tags)
+
     def _send_stat(self, stat, value, rate, tags=None):
         self._after(self._prepare(stat, value, rate, tags=tags))
 
