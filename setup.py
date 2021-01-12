@@ -13,6 +13,7 @@ setup(
     url='https://github.com/Granitosaurus/statsd-telegraf',
     license='MIT',
     packages=find_packages(),
+    setup_requires=['wheel'],
     include_package_data=True,
     package_data={'': ['README.rst']},
     test_suite='nose.collector',
