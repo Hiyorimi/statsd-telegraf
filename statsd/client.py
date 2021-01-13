@@ -135,7 +135,7 @@ class StatsClientBase(object):
 
     def _build_tag(self, tag, value):
         if value:
-            return '{}={}'.format(str(tag), str(value))
+            return '{}:{}'.format(str(tag), str(value))
         else:
             return tag
 
